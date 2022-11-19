@@ -1,0 +1,21 @@
+{
+    "type": "package",
+    "name": "matsubara0507/octicons",
+    "summary": "GitHub's Octicons for Elm",
+    "license": "MIT",
+    "version": "1.0.0",
+    "exposed-modules": [
+        "Octicons.Large",
+        "Octicons.Medium",
+        "Octicons.Small",
+        "Octicons.Nodes"
+    ],
+    "elm-version": "0.19.1 <= v < 0.20.0",
+    "dependencies": {
+        "elm/core": "1.0.0 <= v < 2.0.0",
+        "elm/html": "1.0.0 <= v < 2.0.0",
+        "elm/svg": "1.0.0 <= v < 2.0.0"
+    },
+    "test-dependencies": {
+    }
+}

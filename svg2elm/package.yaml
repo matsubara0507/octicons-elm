@@ -1,0 +1,36 @@
+name:                svg2elm
+version:             1.0.0
+github:              "matsubara0507/svg2elm"
+license:             MIT
+author:              "MATSUBARA Nobutada"
+maintainer:          "nobutada0507@gmail.com"
+copyright:           "2022 MATSUBARA Nobutada"
+
+extra-source-files:
+- README.md
+- CHANGELOG.md
+
+description:         Please see the README on GitHub at <https://github.com/matsubara0507/svg2elm#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- directory
+- filepath
+- text
+- xml-conduit
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+executables:
+  svg2elm:
+    main:                Main.hs
+    source-dirs:         app
