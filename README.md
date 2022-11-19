@@ -3,12 +3,13 @@
 Provides SVG of [GitHub's Octicons](https://primer.style/octicons/) to Elm application.
 
 ```elm
+import Html.Attributes exposing (style)
 import Octicons.Medium as Octicons
 
 view : Model -> Html msg
 view model = 
     ...
-    Octicons.alert []
+    Octicons.alert [ style "fill" "red" ]
 ```
 
 ## Development
