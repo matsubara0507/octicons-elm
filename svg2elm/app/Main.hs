@@ -23,11 +23,20 @@ main = do
     paths <- getSvgFilePaths (args !! 0)
     nodes <- forM paths $ fmap (uncurry buildNodeElm) . readSvgFile
     let outputdir = args !! 1
-    writeModule $ uncurry (ElmModule outputdir "Nodes"  nodesImports) (unzip nodes)
+    writeModule $ uncurry (ElmModule outputdir "Nodes" nodesDocs nodesImports) (unzip nodes)
     let svgNames = fmap takeSvgName paths
-    writeModule $ uncurry (ElmModule outputdir "Small"  iconsImports) (unzip $ fmap buildSvgElm $ filterBySize 12 svgNames)
-    writeModule $ uncurry (ElmModule outputdir "Medium" iconsImports) (unzip $ fmap buildSvgElm $ filterBySize 16 svgNames)
-    writeModule $ uncurry (ElmModule outputdir "Large"  iconsImports) (unzip $ fmap buildSvgElm $ filterBySize 24 svgNames)
+    writeModule $ 
+      uncurry
+        (ElmModule outputdir "Small" (buildIconsDocs "12") iconsImports) 
+        (unzip $ fmap buildSvgElm $ filterBySize 12 svgNames)
+    writeModule $ 
+      uncurry
+        (ElmModule outputdir "Medium" (buildIconsDocs "16") iconsImports)
+        (unzip $ fmap buildSvgElm $ filterBySize 16 svgNames)
+    writeModule $ 
+      uncurry
+        (ElmModule outputdir "Large" (buildIconsDocs "24") iconsImports)
+        (unzip $ fmap buildSvgElm $ filterBySize 24 svgNames)
   where
     nodesImports = 
       [ "Octicons.Internal as Octicons"
@@ -39,10 +48,23 @@ main = do
       , "Octicons.Internal as Octicons"
       , "Octicons.Nodes as Octicons"
       ]
+    nodesDocs = 
+      [ "`List (Svg msg)` values as SVG Nodes."
+      , "NOTE: all values translated from https://github.com/primer/octicons"
+      , ""
+      , "# SVG Nodes"
+      ]
+    buildIconsDocs px = 
+      [ "`Html msg` values as SVG thate size is " <> px <> "px."
+      , ""
+      , "# SVG Icons"
+      ]
+
 
 data ElmModule = ElmModule
   { dir :: FilePath
   , name :: Text
+  , docs :: [Text]
   , imports :: [Text]
   , exposing :: [Text]
   , defs :: [Text]
@@ -60,10 +82,15 @@ writeModule ElmModule{..} =
   Text.writeFile path (Text.unlines $ headers ++ defs)
   where
     path = dir </> "Octicons" </> Text.unpack name <.> "elm"
-    headers = 
-      [ "module Octicons." <> name <> " exposing (" <> Text.intercalate ", " exposing <> ")"
-      , ""
-      ] ++ fmap ("import " <>) imports ++ [""]
+    headers = concat
+      [ [ "module Octicons." <> name <> " exposing (" <> Text.intercalate ", " exposing <> ")" ]
+      , [ "{-|" ]
+      , docs
+      , [ "@docs " <> Text.intercalate ", " exposing ]
+      , [ "-}" ]
+      , fmap ("import " <>) imports
+      , [ "" ]
+      ]
 
 readSvgFile :: FilePath -> IO (Text, XML.Document)
 readSvgFile path = do
@@ -75,7 +102,8 @@ takeSvgName = Text.pack . takeBaseName
 
 buildNodeElm :: Text -> XML.Document -> (Text, Text)
 buildNodeElm svgName doc = (nodesFuncName,) $ Text.unlines
-  [ nodesFuncName <> " : List (Svg msg)"
+  [ "{-| ref: https://primer.style/octicons/"<> svgName <> " -}"
+  , nodesFuncName <> " : List (Svg msg)"
   , nodesFuncName <> " = [" <> Text.intercalate ", " nodes <> "]"
   ]
   where
@@ -84,7 +112,8 @@ buildNodeElm svgName doc = (nodesFuncName,) $ Text.unlines
 
 buildSvgElm :: Text -> (Text, Text)
 buildSvgElm svgName = (svgFuncName,) $ Text.unlines
-  [ svgFuncName <> " : List (Html.Attribute msg) -> Html msg"
+  [ "{-| ref: https://primer.style/octicons/"<> svgName <> " -}"
+  , svgFuncName <> " : List (Html.Attribute msg) -> Html msg"
   , svgFuncName <> " = Octicons.toSvg " <> svgOptions <> " " <> nodesFuncName
   ]
   where
