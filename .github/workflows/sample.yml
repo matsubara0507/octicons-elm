@@ -46,3 +46,8 @@ jobs:
     - name: Build Sample
       run: elm make --optimize --output=../docs/index.html src/Main.elm 
       working-directory: sample
+
+    - name: Check diff
+      run: |
+        git add -N .
+        git diff --exit-code
