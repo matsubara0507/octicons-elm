@@ -1,0 +1,54 @@
+name: Update if release new version
+on:
+  schedule:
+  - cron:  '0 10 * * *'
+
+jobs:
+  build:
+    name: Build new version commit
+    runs-on: ubuntu-latest
+    env:
+      VERSION_FILE: .octicons-version
+      LATEST_LINK: https://api.github.com/repos/primer/octicons/releases/latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: main
+
+    - name: Set current version
+      id: current
+      run: echo "version=$(cat $VERSION_FILE)" >> $GITHUB_OUTPUT
+
+    - name: Set latest version
+      id: latest
+      run: echo "version=$(curl -s $LATEST_LINK | jq .tag_name | sed -e s/\"//g | sed -e s/^v//g)" >> $GITHUB_OUTPUT
+
+    - name: Check exist branch
+      id: branch
+      env:
+        branch: octicons-version-${{ steps.latest.outputs.version }}
+      run: echo "exist=$(git ls-remote --heads origin $branch | wc -l)" >> $GITHUB_OUTPUT
+
+    - name: Update VERSION_FILE
+      if: ${{ steps.latest.outputs.version != steps.current.outputs.version && steps.branch.outputs.exist == 0 }}
+      env:
+        NEW_VERSION: ${{ steps.latest.outputs.version }}
+      run: echo "$NEW_VERSION" > $VERSION_FILE
+
+    - name: Create Pull Request
+      if: ${{ steps.latest.outputs.version != steps.current.outputs.version && steps.branch.outputs.exist == 0 }}
+      uses: peter-evans/create-pull-request@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: 'Feat: update primer/octicons version'
+        title: Release new primer/octicons version ${{ steps.latest.outputs.version }}
+        body: |
+         @matsubara0507
+         - [x] update primer/octicons version file
+         - [ ] update documents (README)
+         - [ ] update sample workflow
+        labels: New primer/octicons Version
+        branch: octicons-version-${{ steps.latest.outputs.version }}
+        base: main
+        draft: true
