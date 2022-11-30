@@ -19,17 +19,17 @@ jobs:
 
     - name: Set current version
       id: current
-      run: echo "::set-output name=version::$(cat $VERSION_FILE)"
+      run: echo "version=$(cat $VERSION_FILE)" >> $GITHUB_OUTPUT
 
     - name: Set latest version
       id: latest
-      run: echo "::set-output name=version::$(curl -s $LATEST_LINK | jq .tag_name | sed -e s/\"//g | sed -e s/^v//g)"
+      run: echo "version=$(curl -s $LATEST_LINK | jq .tag_name | sed -e s/\"//g | sed -e s/^v//g)" >> $GITHUB_OUTPUT
 
     - name: Check exist branch
       id: branch
       env:
         branch: octicons-version-${{ steps.latest.outputs.version }}
-      run: echo "::set-output name=exist::$(git ls-remote --heads origin $branch | wc -l)"
+      run: echo "exist=$(git ls-remote --heads origin $branch | wc -l)" >> $GITHUB_OUTPUT
 
     - name: Update VERSION_FILE
       if: ${{ steps.latest.outputs.version != steps.current.outputs.version && steps.branch.outputs.exist == 0 }}
