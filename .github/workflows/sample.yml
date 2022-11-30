@@ -25,12 +25,12 @@ jobs:
 
     - name: Cache .stack
       id: cache-stack
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
-        path: svg2elm/.stack-work
-        key: stack-${{ hashFiles('svg2elm/package.yaml') }}-${{ hashFiles('svg2elm/stack.yaml.lock') }}
+        path: ~/.stack
+        key: stack-1-${{ hashFiles('svg2elm/package.yaml') }}-${{ hashFiles('svg2elm/stack.yaml.lock') }}
         restore-keys: |
-          stack-
+          stack-1-
     - uses: haskell/actions/setup@v2
       name: Setup Haskell
       with:
