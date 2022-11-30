@@ -2,7 +2,6 @@ name: Update if release new version
 on:
   schedule:
   - cron:  '0 10 * * *'
-  pull_request: null
 
 jobs:
   build:
@@ -15,7 +14,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-        ref: ci
+        ref: main
 
     - name: Set current version
       id: current
