@@ -1,6 +1,6 @@
 {
     "type": "package",
-    "name": "matsubara0507/octicons",
+    "name": "matsubara0507/octicons-elm",
     "summary": "GitHub's Octicons for Elm",
     "license": "MIT",
     "version": "1.0.0",
