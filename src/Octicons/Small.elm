@@ -1,6 +1,6 @@
 module Octicons.Small exposing (alertFill, checkCircleFill, chevronDown, chevronRight, noEntryFill, xCircleFill)
 
-{-| `Html msg` values as SVG thate size is 12px.
+{-| `Html msg` values as SVG that size is 12px.
 
 
 # SVG Icons

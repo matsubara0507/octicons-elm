@@ -55,7 +55,7 @@ main = do
       , "# SVG Nodes"
       ]
     buildIconsDocs px = 
-      [ "`Html msg` values as SVG thate size is " <> px <> "px."
+      [ "`Html msg` values as SVG that size is " <> px <> "px."
       , ""
       , "# SVG Icons"
       ]
