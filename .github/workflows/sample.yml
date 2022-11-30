@@ -41,6 +41,8 @@ jobs:
     - name: Clone primer/octicons
       run: git clone --depth=1 -bv$(cat .octicons-version) https://github.com/primer/octicons.git
     - name: Generate Elm code from SVG
+      env:
+        STACK_BUILD_OPTS: --system-ghc
       run: ./script/svg2elm.sh
 
     - name: Build Sample
