@@ -53,3 +53,6 @@ jobs:
       run: |
         git add -N .
         git diff --exit-code
+
+    - name: Generate Elm docs
+      run: elm make --docs=docs.json
