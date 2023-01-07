@@ -1,11 +1,11 @@
-module Octicons.Medium exposing (accessibility, accessibilityInset, alert, alertFill, apps, archive, arrowBoth, arrowDown, arrowDownLeft, arrowDownRight, arrowLeft, arrowRight, arrowSwitch, arrowUp, arrowUpLeft, arrowUpRight, beaker, bell, bellFill, bellSlash, blocked, bold, book, bookmark, bookmarkSlash, briefcase, broadcast, browser, bug, cache, calendar, check, checkCircle, checkCircleFill, checkbox, checklist, chevronDown, chevronLeft, chevronRight, chevronUp, circle, circleSlash, clock, clockFill, cloud, cloudOffline, code, codeOfConduct, codeReview, codeSquare, codescan, codescanCheckmark, codespaces, columns, commandPalette, comment, commentDiscussion, container, copilot, copilotError, copilotWarning, copy, cpu, creditCard, crossReference, dash, database, dependabot, desktopDownload, deviceCamera, deviceCameraVideo, deviceDesktop, deviceMobile, diamond, diff, diffAdded, diffIgnored, diffModified, diffRemoved, diffRenamed, dot, dotFill, download, duplicate, ellipsis, eye, eyeClosed, feedDiscussion, feedForked, feedHeart, feedMerged, feedPerson, feedRepo, feedRocket, feedStar, feedTag, feedTrophy, file, fileAdded, fileBadge, fileBinary, fileCode, fileDiff, fileDirectory, fileDirectoryFill, fileDirectoryOpenFill, fileMoved, fileRemoved, fileSubmodule, fileSymlinkFile, fileZip, filter, flame, fold, foldDown, foldUp, gear, gift, gitBranch, gitCommit, gitCompare, gitMerge, gitMergeQueue, gitPullRequest, gitPullRequestClosed, gitPullRequestDraft, globe, grabber, graph, hash, heading, heart, heartFill, history, home, horizontalRule, hourglass, hubot, idBadge, image, inbox, infinity, info, issueClosed, issueDraft, issueOpened, issueReopened, issueTrackedBy, issueTrackedIn, italic, iterations, kebabHorizontal, key, keyAsterisk, law, lightBulb, link, linkExternal, listOrdered, listUnordered, location, lock, log, logoGist, logoGithub, mail, markGithub, markdown, megaphone, mention, meter, milestone, mirror, moon, mortarBoard, multiSelect, mute, noEntry, northStar, note, number, organization, package, packageDependencies, packageDependents, paintbrush, paperAirplane, paperclip, paste, pencil, people, person, personAdd, personFill, pin, play, plug, plus, plusCircle, project, projectRoadmap, projectSymlink, pulse, question, quote, reply, repo, repoClone, repoDeleted, repoForked, repoLocked, repoPull, repoPush, repoTemplate, report, rocket, rows, rss, ruby, screenFull, screenNormal, search, server, share, shareAndroid, shield, shieldCheck, shieldLock, shieldSlash, shieldX, sidebarCollapse, sidebarExpand, signIn, signOut, singleSelect, skip, skipFill, sliders, smiley, sortAsc, sortDesc, square, squareFill, squirrel, stack, star, starFill, stop, stopwatch, strikethrough, sun, sync, tabExternal, table, tag, tasklist, telescope, telescopeFill, terminal, threeBars, thumbsdown, thumbsup, tools, trash, triangleDown, triangleLeft, triangleRight, triangleUp, trophy, typography, unfold, unlock, unmute, unverified, upload, verified, versions, video, webhook, workflow, x, xCircle, xCircleFill, zap)
+module Octicons.Medium exposing (accessibility, accessibilityInset, alert, alertFill, apps, archive, arrowBoth, arrowDown, arrowDownLeft, arrowDownRight, arrowLeft, arrowRight, arrowSwitch, arrowUp, arrowUpLeft, arrowUpRight, beaker, bell, bellFill, bellSlash, blocked, bold, book, bookmark, bookmarkSlash, briefcase, broadcast, browser, bug, cache, calendar, check, checkCircle, checkCircleFill, checkbox, checklist, chevronDown, chevronLeft, chevronRight, chevronUp, circle, circleSlash, clock, clockFill, cloud, cloudOffline, code, codeOfConduct, codeReview, codeSquare, codescan, codescanCheckmark, codespaces, columns, commandPalette, comment, commentDiscussion, container, copilot, copilotError, copilotWarning, copy, cpu, creditCard, crossReference, dash, database, dependabot, desktopDownload, deviceCamera, deviceCameraVideo, deviceDesktop, deviceMobile, diamond, diff, diffAdded, diffIgnored, diffModified, diffRemoved, diffRenamed, dot, dotFill, download, duplicate, ellipsis, eye, eyeClosed, feedDiscussion, feedForked, feedHeart, feedMerged, feedPerson, feedRepo, feedRocket, feedStar, feedTag, feedTrophy, file, fileAdded, fileBadge, fileBinary, fileCode, fileDiff, fileDirectory, fileDirectoryFill, fileDirectoryOpenFill, fileMoved, fileRemoved, fileSubmodule, fileSymlinkFile, fileZip, filter, flame, fold, foldDown, foldUp, gear, gift, gitBranch, gitCommit, gitCompare, gitMerge, gitMergeQueue, gitPullRequest, gitPullRequestClosed, gitPullRequestDraft, globe, goal, grabber, graph, hash, heading, heart, heartFill, history, home, horizontalRule, hourglass, hubot, idBadge, image, inbox, infinity, info, issueClosed, issueDraft, issueOpened, issueReopened, issueTrackedBy, issueTrackedIn, italic, iterations, kebabHorizontal, key, keyAsterisk, law, lightBulb, link, linkExternal, listOrdered, listUnordered, location, lock, log, logoGist, logoGithub, mail, markGithub, markdown, megaphone, mention, meter, milestone, mirror, moon, mortarBoard, multiSelect, mute, noEntry, northStar, note, number, organization, package, packageDependencies, packageDependents, paintbrush, paperAirplane, paperclip, paste, pencil, people, person, personAdd, personFill, pin, play, plug, plus, plusCircle, project, projectRoadmap, projectSymlink, pulse, question, quote, read, relFilePath, reply, repo, repoClone, repoDeleted, repoForked, repoLocked, repoPull, repoPush, repoTemplate, report, rocket, rows, rss, ruby, screenFull, screenNormal, search, server, share, shareAndroid, shield, shieldCheck, shieldLock, shieldSlash, shieldX, sidebarCollapse, sidebarExpand, signIn, signOut, singleSelect, skip, skipFill, sliders, smiley, sortAsc, sortDesc, sponsorTiers, square, squareFill, squirrel, stack, star, starFill, stop, stopwatch, strikethrough, sun, sync, tabExternal, table, tag, tasklist, telescope, telescopeFill, terminal, threeBars, thumbsdown, thumbsup, tools, trash, triangleDown, triangleLeft, triangleRight, triangleUp, trophy, typography, unfold, unlink, unlock, unmute, unread, unverified, upload, verified, versions, video, webhook, workflow, x, xCircle, xCircleFill, zap)
 
 {-| `Html msg` values as SVG that size is 16px.
 
 
 # SVG Icons
 
-@docs accessibility, accessibilityInset, alert, alertFill, apps, archive, arrowBoth, arrowDown, arrowDownLeft, arrowDownRight, arrowLeft, arrowRight, arrowSwitch, arrowUp, arrowUpLeft, arrowUpRight, beaker, bell, bellFill, bellSlash, blocked, bold, book, bookmark, bookmarkSlash, briefcase, broadcast, browser, bug, cache, calendar, check, checkCircle, checkCircleFill, checkbox, checklist, chevronDown, chevronLeft, chevronRight, chevronUp, circle, circleSlash, clock, clockFill, cloud, cloudOffline, code, codeOfConduct, codeReview, codeSquare, codescan, codescanCheckmark, codespaces, columns, commandPalette, comment, commentDiscussion, container, copilot, copilotError, copilotWarning, copy, cpu, creditCard, crossReference, dash, database, dependabot, desktopDownload, deviceCamera, deviceCameraVideo, deviceDesktop, deviceMobile, diamond, diff, diffAdded, diffIgnored, diffModified, diffRemoved, diffRenamed, dot, dotFill, download, duplicate, ellipsis, eye, eyeClosed, feedDiscussion, feedForked, feedHeart, feedMerged, feedPerson, feedRepo, feedRocket, feedStar, feedTag, feedTrophy, file, fileAdded, fileBadge, fileBinary, fileCode, fileDiff, fileDirectory, fileDirectoryFill, fileDirectoryOpenFill, fileMoved, fileRemoved, fileSubmodule, fileSymlinkFile, fileZip, filter, flame, fold, foldDown, foldUp, gear, gift, gitBranch, gitCommit, gitCompare, gitMerge, gitMergeQueue, gitPullRequest, gitPullRequestClosed, gitPullRequestDraft, globe, grabber, graph, hash, heading, heart, heartFill, history, home, horizontalRule, hourglass, hubot, idBadge, image, inbox, infinity, info, issueClosed, issueDraft, issueOpened, issueReopened, issueTrackedBy, issueTrackedIn, italic, iterations, kebabHorizontal, key, keyAsterisk, law, lightBulb, link, linkExternal, listOrdered, listUnordered, location, lock, log, logoGist, logoGithub, mail, markGithub, markdown, megaphone, mention, meter, milestone, mirror, moon, mortarBoard, multiSelect, mute, noEntry, northStar, note, number, organization, package, packageDependencies, packageDependents, paintbrush, paperAirplane, paperclip, paste, pencil, people, person, personAdd, personFill, pin, play, plug, plus, plusCircle, project, projectRoadmap, projectSymlink, pulse, question, quote, reply, repo, repoClone, repoDeleted, repoForked, repoLocked, repoPull, repoPush, repoTemplate, report, rocket, rows, rss, ruby, screenFull, screenNormal, search, server, share, shareAndroid, shield, shieldCheck, shieldLock, shieldSlash, shieldX, sidebarCollapse, sidebarExpand, signIn, signOut, singleSelect, skip, skipFill, sliders, smiley, sortAsc, sortDesc, square, squareFill, squirrel, stack, star, starFill, stop, stopwatch, strikethrough, sun, sync, tabExternal, table, tag, tasklist, telescope, telescopeFill, terminal, threeBars, thumbsdown, thumbsup, tools, trash, triangleDown, triangleLeft, triangleRight, triangleUp, trophy, typography, unfold, unlock, unmute, unverified, upload, verified, versions, video, webhook, workflow, x, xCircle, xCircleFill, zap
+@docs accessibility, accessibilityInset, alert, alertFill, apps, archive, arrowBoth, arrowDown, arrowDownLeft, arrowDownRight, arrowLeft, arrowRight, arrowSwitch, arrowUp, arrowUpLeft, arrowUpRight, beaker, bell, bellFill, bellSlash, blocked, bold, book, bookmark, bookmarkSlash, briefcase, broadcast, browser, bug, cache, calendar, check, checkCircle, checkCircleFill, checkbox, checklist, chevronDown, chevronLeft, chevronRight, chevronUp, circle, circleSlash, clock, clockFill, cloud, cloudOffline, code, codeOfConduct, codeReview, codeSquare, codescan, codescanCheckmark, codespaces, columns, commandPalette, comment, commentDiscussion, container, copilot, copilotError, copilotWarning, copy, cpu, creditCard, crossReference, dash, database, dependabot, desktopDownload, deviceCamera, deviceCameraVideo, deviceDesktop, deviceMobile, diamond, diff, diffAdded, diffIgnored, diffModified, diffRemoved, diffRenamed, dot, dotFill, download, duplicate, ellipsis, eye, eyeClosed, feedDiscussion, feedForked, feedHeart, feedMerged, feedPerson, feedRepo, feedRocket, feedStar, feedTag, feedTrophy, file, fileAdded, fileBadge, fileBinary, fileCode, fileDiff, fileDirectory, fileDirectoryFill, fileDirectoryOpenFill, fileMoved, fileRemoved, fileSubmodule, fileSymlinkFile, fileZip, filter, flame, fold, foldDown, foldUp, gear, gift, gitBranch, gitCommit, gitCompare, gitMerge, gitMergeQueue, gitPullRequest, gitPullRequestClosed, gitPullRequestDraft, globe, goal, grabber, graph, hash, heading, heart, heartFill, history, home, horizontalRule, hourglass, hubot, idBadge, image, inbox, infinity, info, issueClosed, issueDraft, issueOpened, issueReopened, issueTrackedBy, issueTrackedIn, italic, iterations, kebabHorizontal, key, keyAsterisk, law, lightBulb, link, linkExternal, listOrdered, listUnordered, location, lock, log, logoGist, logoGithub, mail, markGithub, markdown, megaphone, mention, meter, milestone, mirror, moon, mortarBoard, multiSelect, mute, noEntry, northStar, note, number, organization, package, packageDependencies, packageDependents, paintbrush, paperAirplane, paperclip, paste, pencil, people, person, personAdd, personFill, pin, play, plug, plus, plusCircle, project, projectRoadmap, projectSymlink, pulse, question, quote, read, relFilePath, reply, repo, repoClone, repoDeleted, repoForked, repoLocked, repoPull, repoPush, repoTemplate, report, rocket, rows, rss, ruby, screenFull, screenNormal, search, server, share, shareAndroid, shield, shieldCheck, shieldLock, shieldSlash, shieldX, sidebarCollapse, sidebarExpand, signIn, signOut, singleSelect, skip, skipFill, sliders, smiley, sortAsc, sortDesc, sponsorTiers, square, squareFill, squirrel, stack, star, starFill, stop, stopwatch, strikethrough, sun, sync, tabExternal, table, tag, tasklist, telescope, telescopeFill, terminal, threeBars, thumbsdown, thumbsup, tools, trash, triangleDown, triangleLeft, triangleRight, triangleUp, trophy, typography, unfold, unlink, unlock, unmute, unread, unverified, upload, verified, versions, video, webhook, workflow, x, xCircle, xCircleFill, zap
 
 -}
 
@@ -903,6 +903,13 @@ globe =
     Octicons.toSvg { name = "globe", size = 16 } Octicons.globe16Nodes
 
 
+{-| ref: <https://primer.style/octicons/goal-16>
+-}
+goal : List (Html.Attribute msg) -> Html msg
+goal =
+    Octicons.toSvg { name = "goal", size = 16 } Octicons.goal16Nodes
+
+
 {-| ref: <https://primer.style/octicons/grabber-16>
 -}
 grabber : List (Html.Attribute msg) -> Html msg
@@ -1449,6 +1456,20 @@ quote =
     Octicons.toSvg { name = "quote", size = 16 } Octicons.quote16Nodes
 
 
+{-| ref: <https://primer.style/octicons/read-16>
+-}
+read : List (Html.Attribute msg) -> Html msg
+read =
+    Octicons.toSvg { name = "read", size = 16 } Octicons.read16Nodes
+
+
+{-| ref: <https://primer.style/octicons/rel-file-path-16>
+-}
+relFilePath : List (Html.Attribute msg) -> Html msg
+relFilePath =
+    Octicons.toSvg { name = "rel-file-path", size = 16 } Octicons.relFilePath16Nodes
+
+
 {-| ref: <https://primer.style/octicons/reply-16>
 -}
 reply : List (Html.Attribute msg) -> Html msg
@@ -1701,6 +1722,13 @@ sortDesc =
     Octicons.toSvg { name = "sort-desc", size = 16 } Octicons.sortDesc16Nodes
 
 
+{-| ref: <https://primer.style/octicons/sponsor-tiers-16>
+-}
+sponsorTiers : List (Html.Attribute msg) -> Html msg
+sponsorTiers =
+    Octicons.toSvg { name = "sponsor-tiers", size = 16 } Octicons.sponsorTiers16Nodes
+
+
 {-| ref: <https://primer.style/octicons/square-16>
 -}
 square : List (Html.Attribute msg) -> Html msg
@@ -1911,6 +1939,13 @@ unfold =
     Octicons.toSvg { name = "unfold", size = 16 } Octicons.unfold16Nodes
 
 
+{-| ref: <https://primer.style/octicons/unlink-16>
+-}
+unlink : List (Html.Attribute msg) -> Html msg
+unlink =
+    Octicons.toSvg { name = "unlink", size = 16 } Octicons.unlink16Nodes
+
+
 {-| ref: <https://primer.style/octicons/unlock-16>
 -}
 unlock : List (Html.Attribute msg) -> Html msg
@@ -1923,6 +1958,13 @@ unlock =
 unmute : List (Html.Attribute msg) -> Html msg
 unmute =
     Octicons.toSvg { name = "unmute", size = 16 } Octicons.unmute16Nodes
+
+
+{-| ref: <https://primer.style/octicons/unread-16>
+-}
+unread : List (Html.Attribute msg) -> Html msg
+unread =
+    Octicons.toSvg { name = "unread", size = 16 } Octicons.unread16Nodes
 
 
 {-| ref: <https://primer.style/octicons/unverified-16>
