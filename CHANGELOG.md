@@ -1,5 +1,7 @@
 # Changelog
 
+# 1.1.0
+
 * Support Octicons v17.10.1
 
 # 1.0.0
