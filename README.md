@@ -15,7 +15,7 @@ view model =
 ## Development
 
 ```
-git clone --depth=1 -bv17.9.0 https://github.com/primer/octicons.git
+git clone --depth=1 -bv17.10.1 https://github.com/primer/octicons.git
 ./script/svg2elm.sh
 ```
 
